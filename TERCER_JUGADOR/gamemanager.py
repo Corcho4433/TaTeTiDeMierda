@@ -15,6 +15,7 @@ class GameManager:
         self._display = Display(tablero)
         self._state = GameState(tablero)
 
+    #MODIFICADO
     def gameloop(self):
         """Se encarga de definir el loop del juego y de tomar las decisiones pertinentes."""
         self._tablero.spawngrid()
@@ -44,7 +45,7 @@ class GameManager:
                 continue
 
             winner = self._state.checkwin()
-            if winner in ["X", "O"]:
+            if winner in ["X", "O", "Z"]:
                 self._display.displaytablero()
                 print(f"Gana el jugador {winner}!")
                 break
